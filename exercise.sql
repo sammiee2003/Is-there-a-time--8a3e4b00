@@ -5,10 +5,10 @@ USE sterrenstelsel;
 /*SELECT * FROM planeten;*/
 TRUNCATE TABLE  planeten;
 
-ALTER TABLE planeten add COLUMN diameter INT;
-ALTER TABLE planeten add COLUMN afstand_tot_de_zon INT;
-ALTER TABLE planeten add COLUMN massa INT;
-ALTER TABLE planeten add COLUMN bezoek_datum DATE NULL;
+ALTER TABLE planeten add COLUMN diameter INT not null;
+ALTER TABLE planeten add COLUMN afstand_tot_de_zon INT not null;
+ALTER TABLE planeten add COLUMN massa INT not null;
+ALTER TABLE planeten add COLUMN bezoek_datum DATE NULL ;
 INSERT INTO planeten (naam, afstand_tot_de_zon, massa, diameter, bezoek_datum) VALUE ("Zon", 0, 332.946, 1.392000, null);
 INSERT INTO planeten (naam, afstand_tot_de_zon, massa, diameter, bezoek_datum) VALUE ("Mercurius", 57.910000, 0.1, 4.880, null);
 INSERT INTO planeten (naam, afstand_tot_de_zon, massa, diameter, bezoek_datum) VALUE ("Venus", 108.208930, 0.9, 12.104,"1962-03-01");
